@@ -1,6 +1,3 @@
----
-author: Brook Seyoum
----
 # Self-Hosted Docker Compose Setup Templates
 
 This is a repo I'm using to stash templated information and personal configuration about my self-hosted homelab.
@@ -21,10 +18,10 @@ For details on how I prepare my Linux servers, see [./setup][setup].
 
 ## Docker-compose (Services) Setup
 For details on how I configure docker-compose for my various self-hosted services, visit the respective directory:
-- [homelab]: ./homelab
-- [network]: ./network
-- [media]: ./media
-- [setup]: ./setup
+- [homelab](./homelab)
+- [network](./network)
+- [media](./media)
+- [setup](./setup)
 
 
 ## Local Ports
@@ -44,3 +41,4 @@ For details on how I configure docker-compose for my various self-hosted service
 [homelab]: ./homelab
 [network]: ./network
 [media]: ./media
+[setup]: ./setup
