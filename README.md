@@ -7,11 +7,11 @@ This is a repo I'm using to stash templated information and personal configurati
 Inside here are templates I've crafted through experimenting with self-hosting many different services and seeing what suits best for me.
 
 I have 3 templates currently:
-- [./homelab](homelab) - These included self-hosted cloud services such as [Nextcloud](https://nextcloud.com/), [Syncthing](https://syncthing.net/), [Gitea](https://about.gitea.com/), [FreshRSS](https://freshrss.org/), [Vaultwarden](https://github.com/dani-garcia/vaultwarden), [Portainer](https://docs.portainer.io/start/install-ce) and a personal dashboard [Homepage](https://gethomepage.dev/en/installation/).
+- [./homelab](homelab) - These included self-hosted cloud services such as [Nextcloud](https://nextcloud.com), [Home Assistant](https://www.home-assistant.io), [FreshRSS](https://freshrss.org), [Vaultwarden](https://github.com/dani-garcia/vaultwarden), [Portainer](https://docs.portainer.io/start/install-ce) and a personal dashboard [Homepage](https://gethomepage.dev/en/installation).
 
-- [./network](network) - These include network goodies such as [Pi-hole](https://pi-hole.net/)(network-level adblock) and  [Wiregaurd](https://www.wireguard.com/) (to VPN into my home network)
+- [./network](network) - These include network goodies such as [Pi-hole](https://pi-hole.net)(network-level adblock) and  [Wiregaurd](https://www.wireguard.com) (to VPN into my home network)
 
-- [./media](media) - What it sounds like, self-hosted servers for movies and series like [Sonarr](https://sonarr.tv/), [Radarr](https://radarr.video/), etc...
+- [./media](media) - What it sounds like, self-hosted servers for movies and series like [Sonarr](https://sonarr.tv), [Radarr](https://radarr.video), etc...
 
 ## Server Setup
 For details on how I prepare my Linux servers, see [./setup][setup].
