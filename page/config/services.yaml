@@ -1,0 +1,48 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- Server:
+    - Portainer:
+        href: https://localhost:9443
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/portainer.svg
+        description: Container Management on the Web
+    - Home Assistant:
+        href: https://localhost:8123
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/home-assistant-alt.svg
+        description: Home Automation
+
+- Network:
+    - Pi:
+        href: http://localhost/
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/raspberrypi.svg
+        description: Network-Wide Adblocking
+    - Adguard Home:
+        href: http://localhost/
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard-home.svg
+        description: Specific Adblocking
+
+- Monitoring:
+    - Grafana:
+        href: http://localhost/
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/grafana.svg
+        description: Metric Dashboard
+    - Prometheus:
+        href: http://localhost/
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/prometheus.svg
+        description: Metric Server
+
+- Applications:
+    - Vaultwarden:
+        href: http://localhost/8090
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/vaultwarden.svg
+        description: Password Managment
+    - Sonarr:
+        href: http://localhost/
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sonarr.svg
+        description: Series Management
+    - Radarr:
+        href: http://localhost/
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/radarr.svg
+        description: Movies Management
+
