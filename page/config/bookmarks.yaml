@@ -1,0 +1,65 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/bookmarks
+
+- Site:
+    - Homepage:
+        - abbr: HP
+          icon: https://cdn-icons-png.flaticon.com/512/1323/1323734.png 
+          href: https://brook-s-homepage.web.app
+    - Profile:
+        - abbr: PRO
+          icon: https://cdn-icons-png.flaticon.com/512/1323/1323734.png 
+          href: https://zenserene.netlify.app
+
+- Dev:
+    - GitHub:
+        - abbr: GH
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/github.svg
+          href: https://github.com/turmaxx
+    - GitLab:
+        - abbr: GL
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/gitlab.svg
+          href: https://gitlab.com/brook-seyoum
+    - Codeberg:
+        - abbr: CB
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/codeberg.svg
+          href: https://codeberg.com/turmaxx
+
+- Wikis and FlakeHub:
+    - NixOS Wiki:
+        - abrr: NixWIKI
+          icon: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
+          href: https://nixos.wiki/
+    - NIXPKGS Search:
+        - abrr: NIXPKGS
+          icon: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
+          href: https://search.nixos.org
+    - Home Manager Option Search:
+        - abrr: home-manager
+          icon: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
+          href: https://mipmip.github.io/home-manager-option-search/?query=
+
+- Social:
+    - Reddit:
+        - abbr: RE
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/reddit.svg
+          href: https://reddit.com/
+    - Instagram:
+        - abbr: INSTA
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/instagram.svg
+          href: https://instagram.com/bk_solo_
+    - Twitter:
+        - abbr: TW
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/twitter.svg
+          href: https://twitter.com/bk_solo_
+    - Mastodon:
+        - abbr: MASTO
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/mastodon.svg
+          href: https://fosstodon.org/@inframan
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/youtube.svg
+          href: https://youtube.com/
