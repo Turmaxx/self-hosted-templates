@@ -1,0 +1,10 @@
+page/login
+homeassistant/login
+portainer/login
+vaultwarden/login
+
+page/config/logs
+homeassistant/config
+portainer/portainer_data
+vaultwarden/vw-data
+.direnv
