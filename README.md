@@ -11,7 +11,7 @@ I have 3 templates currently:
 
 - [./network](network) - These include network goodies such as [Pi-hole](https://pi-hole.net/)(network-level adblock) and  [Wiregaurd](https://www.wireguard.com/) (to VPN into my home network)
 
-- [./media](media) - What it sounds like, self-hosted servers for games like [Minecraft](https://www.minecraft.net/en-us), [Terraria](https://terraria.org/), etc...
+- [./media](media) - What it sounds like, self-hosted servers for movies and series like [Sonarr](https://sonarr.tv/), [Radarr](https://radarr.video/), etc...
 
 ## Server Setup
 For details on how I prepare my Linux servers, see [./setup][setup].
