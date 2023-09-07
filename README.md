@@ -2,7 +2,7 @@
 
 This is a repo I'm using to stash templated information and personal configuration about my self-hosted homelab.
 
-![img/self-hosted-dashboard.png]
+![](img/self-hosted-dashboard.png)
 
 Inside here are templates I've crafted through experimenting with self-hosting many different services and seeing what suits best for me.
 
