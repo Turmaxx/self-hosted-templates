@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: page
+    ports:
+      - 3240:3000
+    volumes:
+      - ./page/config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - ./homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - 9443:9443
+    volumes:
+      - ./portainer/portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+  vaultwarden:
+    image: 'vaultwarden/server:latest'
+    container_name: vaultwarden
+    ports:
+      - '8090:80'
+    restart: unless-stopped
+    volumes:
+      - ./vaultwarden/vw-data/:/data/
+
+volumes:
+  portainer_data:
