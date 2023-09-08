@@ -18,9 +18,9 @@
       hour12: true
 
 - openmeteo:
-    label: Kitchener # optional
+    label: Addis Abeba # optional
     latitude: 45.822231
     longitude: 8.437710
-    timezone: America/Toronto # optional
+    timezone: Africa/Nairobi # optional
     units: metric # or imperial
     cache: 5 # Time in minutes to cache API responses, to stay within limits
