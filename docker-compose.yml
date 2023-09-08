@@ -11,8 +11,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
     container_name: homeassistant
-    image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
       - ./homeassistant/config:/config
       - /etc/localtime:/etc/localtime:ro
@@ -31,10 +31,10 @@ services:
     restart: unless-stopped
 
   vaultwarden:
-    image: 'vaultwarden/server:latest'
+    image: vaultwarden/server:latest
     container_name: vaultwarden
     ports:
-      - '8090:80'
+      - 8090:80
     restart: unless-stopped
     volumes:
       - ./vaultwarden/vw-data/:/data/
