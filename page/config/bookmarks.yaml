@@ -21,10 +21,6 @@
         - abbr: GL
           icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/gitlab.svg
           href: https://gitlab.com/brook-seyoum
-    - Codeberg:
-        - abbr: CB
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/codeberg.svg
-          href: https://codeberg.com/turmaxx
 
 - Wikis and FlakeHub:
     - NixOS Wiki:
