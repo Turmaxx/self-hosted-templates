@@ -44,6 +44,17 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
+  samba:
+    image: dockurr/samba
+    container_name: samba
+    ports:
+      - 445:445
+    volumes:
+      - ./samba/public:/public
+      - ./samba/storage:/storage
+      - ./samba/smb.conf:/etc/samba/smb.conf
+      - ./samba/users.conf:/etc/samba/users.conf
+
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
