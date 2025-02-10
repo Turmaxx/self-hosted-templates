@@ -1,7 +1,8 @@
-page
+page/config/logs/*
 samba
 homeassistant
 portainer
 vaultwarden
 qbittorrent
+jellyfin
 .direnv
