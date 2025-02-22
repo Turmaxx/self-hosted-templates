@@ -8,6 +8,7 @@ services:
     volumes:
       - ./page/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
 
   homeassistant:
     image: ghcr.io/home-assistant/home-assistant:stable
@@ -43,6 +44,7 @@ services:
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
 
   samba:
     image: dockurr/samba
@@ -54,6 +56,7 @@ services:
       - ./samba/storage:/storage
       - ./samba/smb.conf:/etc/samba/smb.conf
       - ./samba/users.conf:/etc/samba/users.conf
+    restart: unless-stopped
 
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -70,6 +73,7 @@ services:
       - 8080:8080
       - 6881:6881
       - 6881:6881/udp
+    restart: unless-stopped
 
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
@@ -88,6 +92,7 @@ services:
       # - 8920:8920 #optional
       # - 7359:7359/udp #optional
       # - 1900:1900/udp #optional
+    restart: unless-stopped
 
   it-tools:
     image: corentinth/it-tools
