@@ -1,57 +1,75 @@
 ---
 # For configuration options and examples, please see:
-# https://gethomepage.dev/en/configs/bookmarks
+# https://gethomepage.dev/configs/bookmarks
 
 - Site:
-    - Homepage:
-        - abbr: HP
-          icon: https://cdn-icons-png.flaticon.com/512/1323/1323734.png 
-          href: https://brook-s-homepage.web.app
-    - Profile:
-        - abbr: PRO
-          icon: https://cdn-icons-png.flaticon.com/512/1323/1323734.png 
-          href: https://zenserene.netlify.app
+  - Homepage:
+    - abbr: HP
+      icon: https://cdn-icons-png.flaticon.com/512/1323/1323734.png
+      href: https://brook-s-homepage.web.app
+
+  - Profile:
+    - abbr: PRO
+      icon: https://cdn-icons-png.flaticon.com/512/1323/1323734.png
+      href: https://zenserene.netlify.app
 
 - Dev:
-    - GitHub:
-        - abbr: GH
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/github.svg
-          href: https://github.com/turmaxx
-    - GitLab:
-        - abbr: GL
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/gitlab.svg
-          href: https://gitlab.com/brook-seyoum
+  - GitHub:
+    - abbr: GH
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/github.webp
+      href: https://github.com/turmaxx
+
+  - GitLab:
+    - abbr: GL
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/gitlab.webp
+      href: https://gitlab.com/brook-seyoum
 
 - Wikis and FlakeHub:
-    - NixOS Wiki:
-        - abrr: NixWIKI
-          icon: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
-          href: https://wiki.nixos.org/
-    - NIXPKGS Search:
-        - abrr: NIXPKGS
-          icon: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
-          href: https://search.nixos.org
-    - Home Manager Option Search:
-        - abrr: home-manager
-          icon: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
-          href: https://mipmip.github.io/home-manager-option-search/?query=
+  - NixOS Wiki:
+    - abrr: NixWIKI
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/nixos.webp
+      href: https://wiki.nixos.org/
+      
+  - NIXPKGS Search:
+    - abrr: NIXPKGS-SEARCH
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/nixos.webp
+      href: https://search.nixos.org
 
-- Social:
-    - Reddit:
-        - abbr: RE
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/reddit.svg
-          href: https://reddit.com/
-    - Instagram:
-        - abbr: INSTA
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/instagram.svg
-          href: https://instagram.com/bk_solo_
-    - Twitter:
-        - abbr: TW
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/twitter.svg
-          href: https://twitter.com/bk_solo_
+  - Home Manager Option Search:
+    - abrr: HOME-MANAGER
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/nixos.webp
+      href: https://home-manager-options.extranix.com/
 
-- Entertainment:
-    - YouTube:
-        - abbr: YT
-          icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/youtube.svg
-          href: https://youtube.com/
+- Links:
+  - ROMS:
+    - abbr: ROMS
+      icon: https://avatars.githubusercontent.com/u/80073776?s=200&v=4
+      href: https://r-roms.github.io
+  - RetroAchivements:
+    - abrr: RA
+      icon: https://static.retroachievements.org/assets/images/ra-icon.webp
+      href: https://retroachievements.org
+  - Reddit:
+    - abbr: RE
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/reddit.webp
+      href: https://reddit.com/
+  - Instagram:
+    - abbr: INSTA
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/instagram.webp
+      href: https://instagram.com/bk_solo_
+  - X:
+    - abbr: X
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/x.webp
+      href: https://x.com/bk_solo_
+  - BlueSky:
+    - abbr: BSKY
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/bluesky.webp
+      href: https://bsky.app/profile/turmaxx.bsky.social
+  - ChatGPT:
+    - abrr: CHATGPT
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/chatgpt.webp
+      href: https://chatpgt.com
+  - YouTube:
+    - abbr: YT
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/youtube.webp
+      href: https://youtube.com/
