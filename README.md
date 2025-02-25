@@ -32,11 +32,21 @@ For details on how I configure docker-compose for my various self-hosted service
 | homeassistant  | [8123][HOME_PORT]          |
 | page           | [3240][PAGE_PORT]          |
 | portainer      | [9443][PORTAINER_PORT]     |
+| watchtower     | [no port][WATCHTOWER_PORT] |
+| samba          | [no port][SAMBA_PORT]      |
+| qbittorrent    | [8080][QBITTORRENT_PORT]   |
+| jellyfin       | [8096][JELLYFIN_PORT]      |
+| it-tools       | [8085][IT-TOOLS_PORT]      |
 
 [VW_PORT]: http://localhost:8090
 [HOME_PORT]: http://localhost:8123
 [PAGE_PORT]: http://localhost:3240
 [PORTAINER_PORT]: http://localhost:9443
+[QBITTORRENT_PORT]: http://localhost:8080
+[JELLYFIN_PORT]: http://localhost:8096
+[IT-TOOLS_PORT]: http://localhost:8085
+<!-- [WATCHTOWER_PORT]: no port -->
+<!-- [SAMBA_PORT]: no port -->
 
 [homelab]: ./homelab
 [network]: ./network
