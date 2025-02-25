@@ -5,6 +5,14 @@
 - resources:
     cpu: true
     memory: true
+    # cputemp: true
+    # tempmin: 0
+    # tempmax: 100
+    # uptime: true
+    # units: metric
+    # refresh: 500
+    # diskUnits: bytes
+    # expanded: trye
     disk: /
 
 - search:
@@ -24,3 +32,5 @@
     timezone: Africa/Nairobi # optional
     units: metric # or imperial
     cache: 5 # Time in minutes to cache API responses, to stay within limits
+    # format:
+        # maximumFractionDigits: 1
