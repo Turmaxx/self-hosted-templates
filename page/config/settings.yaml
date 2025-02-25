@@ -1,18 +1,59 @@
 ---
 # For configuration options and examples, please see:
-# https://gethomepage.dev/en/configs/settings
+# https://gethomepage.dev/configs/settings/
 
 title: Brook's Dashboard
 
-background: https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+# Dynamic Backgrounds
+# background:
+
+# background: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmRmcDFieTJ2bGFlb284OG1jbHg1dWkyczdleWE2a3Y3MDFnbGx0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgC2RzpbE7vBZ6M/giphy.gif 
+# background: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMm5iZ2YyeTIwaTdveXBwbG41d3VpN3Bsdmlpc3UwZmF2MWhkNWlociZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jCYBYtLNI3Qqbu/giphy.gif
+
+# Static Backgrounds
+# background:
+
+# background: https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 # background: https://images.unsplash.com/photo-1693701598372-13486b3824fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 # background: https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 
 quicklaunch:
   searchDescriptions: true
   hideInternetSearch: true
+  showSearchSuggestions: true
   hideVisitURL: true
+  provider: google
+
+# showStats: true
 
 # providers:
   # openweathermap: openweathermapapikey
-  # weatherapi: $WEATHERAPIKEY 
+  # weatherapi: $WEATHERAPIKEY
+
+layout:
+  
+  # Site:
+  #   iconsOnly: true
+  # Dev:
+  #   iconsOnly: true
+  # Wikis and FlakeHub:
+  #   iconsOnly: true
+  # Links:
+  #   iconsOnly: true
+
+
+  Server:
+    style:
+    rows:
+
+  Media:
+    style:
+    rows:
+   
+  Network:
+    style:
+    rows:
+
+  Index Managers:
+    style:
+    rows:
