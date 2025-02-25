@@ -1,48 +1,149 @@
 ---
 # For configuration options and examples, please see:
-# https://gethomepage.dev/en/configs/services
+# https://gethomepage.dev/configs/services
+
 
 - Server:
-    - Portainer:
-        href: https://localhost:9443
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/portainer.svg
-        description: Container Management on the Web
-    - Home Assistant:
-        href: https://localhost:8123
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/home-assistant-alt.svg
-        description: Home Automation
+  - Portainer:
+      href: https://localhost:9443
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/portainer.webp
+      description: Container Management on the Web
+
+  - Watchtower:
+      href:
+      icon: https://raw.githubusercontent.com/containrrr/watchtower/refs/heads/main/logo.png
+      description: Automated Container Updater
+      ping: watchtower.host
+
+  - Uptime Kuma:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp
+      description: Uptime Service Monitor
+
+  - Grafana:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/grafana.webp
+      description: Server Monitoring Dashboard
+  
+  - Prometheus:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/prometheus.webp
+      description: Event Monitoring & Alerting Dashboard
+
+  - Home Assistant:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/home-assistant-alt.webp
+      description: Home Automation
+
+
+- Media:
+  - Jellyfin:
+      href: http://localhost:8096
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/jellyfin.webp
+      # description: Media Server
+      widget:
+        type: jellyfin
+        url:
+        key: 1db3647773b14101820fc265aad90b1a
+        enableBlocks: true
+        enableNowPlaying: true
+        enableUser: true
+        showEpisodeNumber: true
+        expandOneStreamToTwoRows: false
+        fields:
+          - movies
+          - series
+          - episodes
+
+  - Immich:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/immich.webp
+      description:
+      widget:
+        type: immich
+        url: http://immich.host.or.ip
+        key: adminapikeyadminapikeyadminapikey
+        version: 2 # optional, default is 1
+        fields:
+          - users
+          - photos
+          - vidoes
+          - storage
+
+  - qBitTorrent:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/qbittorrent.webp
+        description:
+        widget:
+          type: qbittorrent
+          url: http://qbittorrent.host.or.ip
+          username: admin
+          password: password
+          enableLeechProgress: true # optional, defaults to false    
+          fields:
+              - seed
+              - leech
+              - download
+              - upload
+  - Calibre:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/calibre-web.webp
+      description:
+      widget:
+        type: calibreweb
+        url: http://your.calibreweb.host:port
+        username: username
+        password: password
+        fields:
+            - books
+            - authors
+            - categories
+            - series
 
 - Network:
-    - Pi:
-        href: http://localhost/
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/raspberrypi.svg
-        description: Network-Wide Adblocking
-    - Adguard Home:
-        href: http://localhost/
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard-home.svg
-        description: Specific Adblocking
+  - PiHole:
+      href:
+      icon:
+      description:
 
-- Monitoring:
-    - Grafana:
-        href: http://localhost/
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/grafana.svg
-        description: Metric Dashboard
-    - Prometheus:
-        href: http://localhost/
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/prometheus.svg
-        description: Metric Server
+  - Adguard Home:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/adguard-home.webp
+      description:
 
-- Applications:
-    - Vaultwarden:
-        href: http://localhost/8090
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/vaultwarden.svg
-        description: Password Managment
-    - Sonarr:
-        href: http://localhost/
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sonarr.svg
-        description: Series Management
-    - Radarr:
-        href: http://localhost/
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/radarr.svg
-        description: Movies Management
 
+- Index Managers:
+  - Jellyseerr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/jellyseerr.webp
+      description: Jellyfin Media Requester
+
+  - Prowlarr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/prowlarr.webp
+      description: Indexer Management
+
+  - Radarr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/radarr.webp
+      description: Movies Management
+
+  - Sonarr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/sonarr.webp
+      description: TV Shows Management
+
+  - Readarr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/readarr.webp
+      description: Books Management
+
+  - Lidarr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/lidarr.webp
+      description: Music Management
+
+  - Bazarr:
+      href:
+      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/bazarr.webp
+      description: Subtitle Collection Management
