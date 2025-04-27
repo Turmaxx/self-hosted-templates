@@ -2,75 +2,73 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services
 
-
 - Server:
-  - Portainer:
-      href: https://localhost:9443
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/portainer.webp
-      description: Container Management on the Web
+    - Portainer:
+        href: https://localhost:9443
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/portainer.webp
+        description: Container Management on the Web
 
-  - Watchtower:
-      href:
-      icon: https://raw.githubusercontent.com/containrrr/watchtower/refs/heads/main/logo.png
-      description: Automated Container Updater
-      ping: watchtower.host
+    - Watchtower:
+        href:
+        icon: https://raw.githubusercontent.com/containrrr/watchtower/refs/heads/main/logo.png
+        description: Automated Container Updater
+        ping: watchtower.host
 
-  - Uptime Kuma:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp
-      description: Uptime Service Monitor
+    - Uptime Kuma:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp
+        description: Uptime Service Monitor
 
-  - Grafana:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/grafana.webp
-      description: Server Monitoring Dashboard
-  
-  - Prometheus:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/prometheus.webp
-      description: Event Monitoring & Alerting Dashboard
+    - Grafana:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/grafana.webp
+        description: Server Monitoring Dashboard
 
-  - Home Assistant:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/home-assistant-alt.webp
-      description: Home Automation
+    - Prometheus:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/prometheus.webp
+        description: Event Monitoring & Alerting Dashboard
 
+    - Home Assistant:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/home-assistant-alt.webp
+        description: Home Automation
 
 - Media:
-  - Jellyfin:
-      href: http://localhost:8096
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/jellyfin.webp
-      # description: Media Server
-      widget:
-        type: jellyfin
-        url:
-        key: 1db3647773b14101820fc265aad90b1a
-        enableBlocks: true
-        enableNowPlaying: true
-        enableUser: true
-        showEpisodeNumber: true
-        expandOneStreamToTwoRows: false
-        fields:
-          - movies
-          - series
-          - episodes
+    - Jellyfin:
+        href: http://localhost:8096
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/jellyfin.webp
+        # description: Media Server
+        widget:
+          type: jellyfin
+          url:
+          key: 1db3647773b14101820fc265aad90b1a
+          enableBlocks: true
+          enableNowPlaying: true
+          enableUser: true
+          showEpisodeNumber: true
+          expandOneStreamToTwoRows: false
+          fields:
+            - movies
+            - series
+            - episodes
 
-  - Immich:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/immich.webp
-      description:
-      widget:
-        type: immich
-        url: http://immich.host.or.ip
-        key: adminapikeyadminapikeyadminapikey
-        version: 2 # optional, default is 1
-        fields:
-          - users
-          - photos
-          - vidoes
-          - storage
+    - Immich:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/immich.webp
+        description:
+        widget:
+          type: immich
+          url: http://immich.host.or.ip
+          key: adminapikeyadminapikeyadminapikey
+          version: 2 # optional, default is 1
+          fields:
+            - users
+            - photos
+            - vidoes
+            - storage
 
-  - qBitTorrent:
+    - qBitTorrent:
         href:
         icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/qbittorrent.webp
         description:
@@ -79,76 +77,75 @@
           url: http://qbittorrent.host.or.ip
           username: admin
           password: password
-          enableLeechProgress: true # optional, defaults to false    
+          enableLeechProgress: true # optional, defaults to false
           fields:
-              - seed
-              - leech
-              - download
-              - upload
-  - Calibre:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/calibre-web.webp
-      description:
-      widget:
-        type: calibreweb
-        url: http://your.calibreweb.host:port
-        username: username
-        password: password
-        fields:
+            - seed
+            - leech
+            - download
+            - upload
+    - Calibre:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/calibre-web.webp
+        description:
+        widget:
+          type: calibreweb
+          url: http://your.calibreweb.host:port
+          username: username
+          password: password
+          fields:
             - books
             - authors
             - categories
             - series
 
-  - FreshRSS:
-      href: http://localhost:8040
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/freshrss.webp
-      description: RSS Reader
+    - FreshRSS:
+        href: http://localhost:8040
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/freshrss.webp
+        description: RSS Reader
 
 - Network:
-  - PiHole:
-      href:
-      icon:
-      description:
+    - PiHole:
+        href:
+        icon:
+        description:
 
-  - Adguard Home:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/adguard-home.webp
-      description:
-
+    - Adguard Home:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/adguard-home.webp
+        description:
 
 - Index Managers:
-  - Jellyseerr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/jellyseerr.webp
-      description: Jellyfin Media Requester
+    - Jellyseerr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/jellyseerr.webp
+        description: Jellyfin Media Requester
 
-  - Prowlarr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/prowlarr.webp
-      description: Indexer Management
+    - Prowlarr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/prowlarr.webp
+        description: Indexer Management
 
-  - Radarr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/radarr.webp
-      description: Movies Management
+    - Radarr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/radarr.webp
+        description: Movies Management
 
-  - Sonarr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/sonarr.webp
-      description: TV Shows Management
+    - Sonarr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/sonarr.webp
+        description: TV Shows Management
 
-  - Readarr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/readarr.webp
-      description: Books Management
+    - Readarr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/readarr.webp
+        description: Books Management
 
-  - Lidarr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/lidarr.webp
-      description: Music Management
+    - Lidarr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/lidarr.webp
+        description: Music Management
 
-  - Bazarr:
-      href:
-      icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/bazarr.webp
-      description: Subtitle Collection Management
+    - Bazarr:
+        href:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/bazarr.webp
+        description: Subtitle Collection Management
