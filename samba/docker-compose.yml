@@ -1,0 +1,13 @@
+---
+services:
+  samba:
+    image: dockurr/samba:latest
+    container_name: samba
+    ports:
+      - 445:445
+    volumes:
+      - ./public:/public
+      - ./storage:/storage
+      - ./smb.conf:/etc/samba/smb.conf
+      - ./users.conf:/etc/samba/users.conf
+    restart: unless-stopped
