@@ -1,0 +1,23 @@
+---
+services:
+  kavita:
+    image: lscr.io/linuxserver/kavita:latest
+    container_name: kavita
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Addis_Ababa
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+    volumes:
+      - ./config:/config
+      - ./comics:/comics
+      - ./books:/books
+    ports:
+      - 2000:5000
+    networks:
+      - homelab-network
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
