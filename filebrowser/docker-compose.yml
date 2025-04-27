@@ -1,0 +1,22 @@
+---
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    ports:
+      - 4038:80
+    environment:
+      - PGID=$(id -u)
+      - PUID=$(id -g)
+      - TZ=Africa/Addis_Ababa
+    volumes:
+      - /home/brook:/srv
+      - ./config/settings.json:/config/settings.json
+      - ./database/filebrowser.db:/database/filebrowser.db
+    networks:
+      - homelab-network
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
