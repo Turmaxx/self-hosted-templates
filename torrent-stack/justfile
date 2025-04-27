@@ -1,0 +1,24 @@
+# Author: Brook Seyoum
+# Created on: Mon Mar 31 03:07:05 PM EAT 2025
+# ==============================================================================
+# justfile for torrent-stack that has the following services running all at once: gluetun qbittorrent jackett sonarr radarr prowlarr
+
+# Start Torrent Stack
+start:
+	docker-compose up -d
+
+# Stop Torrent Stack
+stop:
+	docker-compose stop
+
+# Updated Torrent Stack
+update:
+	docker-compose pull
+
+# Restart Torrent Stack
+restart:
+	docker-compose restart
+
+# Recreate Torrent Stack
+recreate:
+	docker-compose up -d --force-recreate
