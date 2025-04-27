@@ -1,0 +1,20 @@
+---
+services:
+  nfs:
+    image: itsthenetwork/nfs-server-alpine:latest
+    container_name: nfs
+    privileged: true
+    ports:
+      - 2049:2049
+    volumes:
+      - ./share:/nfsshare
+    networks:
+      - homelab-network
+    environment:
+      - SHARED_DIRECTORY=/nfsshare
+      - NFS_EXPORT_0=/nfsshare *(rw,sync,no_subtree_check,no_root_squash)
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
