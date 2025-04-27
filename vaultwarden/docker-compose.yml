@@ -1,0 +1,16 @@
+---
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    ports:
+      - 8090:80
+    networks:
+      - homelab-network
+    volumes:
+      - ./vw-data/:/data/
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
