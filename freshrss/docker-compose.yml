@@ -1,0 +1,36 @@
+---
+services:
+  freshrss:
+    image: lscr.io/linuxserver/freshrss:latest
+    container_name: freshrss
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # - TZ=Etc/UTC
+      - TZ=Africa/Addis_Ababa
+    volumes:
+      - ./config:/config
+    networks:
+      - homelab-network
+    ports:
+      - 8040:80
+    restart: unless-stopped
+
+  full-text-rss:
+    image: heussd/fivefilters-full-text-rss:latest
+    container_name: full-text-rss
+    restart: unless-stopped
+    volumes:
+      - ./rss-cache:/var/www/html/cache/rss
+    networks:
+      - homelab-network
+    ports:
+      - 8041:80
+
+volumes:
+  rss-cache:
+    driver: local
+
+networks:
+  homelab-network:
+    external: true
