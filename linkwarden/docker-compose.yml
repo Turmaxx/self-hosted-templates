@@ -1,0 +1,31 @@
+---
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: linkwarden-postgres
+    env_file: .env
+    volumes:
+      - ./postgres-db:/var/lib/postgresql/data
+    networks:
+      - homelab-network
+    restart: unless-stopped
+
+  linkwarden:
+    image: ghcr.io/linkwarden/linkwarden:latest
+    container_name: linkwarden
+    env_file: .env
+    environment:
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/postgres
+    ports:
+      - 3060:3000
+    networks:
+      - homelab-network
+    volumes:
+      - ./data:/data/data
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
