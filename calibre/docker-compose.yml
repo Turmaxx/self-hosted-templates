@@ -1,0 +1,23 @@
+---
+services:
+  calibre-web-automated:
+    image: crocodilestick/calibre-web-automated:latest
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # - TZ=Etc/UTC
+      - TZ=Africa/Addis_Ababa
+    volumes:
+      - ./config:/config
+      - ./ingest:/cwa-book-ingest
+      - ./library:/calibre-library
+    ports:
+      - 8083:8083
+    networks:
+      - homelab-network
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
