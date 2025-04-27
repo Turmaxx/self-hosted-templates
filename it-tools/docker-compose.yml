@@ -1,0 +1,20 @@
+---
+services:
+  it-tools:
+    image: corentinth/it-tools:latest
+    container_name: it-tools
+    networks:
+      - homelab-network
+    ports:
+      - 8085:80
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.it-tools.rule=Host(`it-tools.brook.laptop`)
+      - traefik.http.routers.it-tools.entrypoints=web
+      # - traefik.http.routers.it-tools.service=it-tools@docker
+      # - traefik.http.routers.it-tools.loadbalancer.server.port=8085
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
