@@ -1,0 +1,22 @@
+---
+services:
+  traefik:
+    image: docker.io/library/traefik:v3.3.4
+    container_name: traefik-proxy
+    ports:
+      - 80:80
+      - 443:443
+      - 8030:8080
+    volumes:
+      - /run/docker.sock:/run/docker.sock:ro
+      - ./config:/etc/traefik:ro
+      # - ./certs/:/var/traefik/certs/:rw
+    # environment:
+    #   - CLOUDFLARE_DNS_API_TOKEN=my-cloudflare-api-token
+    networks:
+      - homelab-network
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
