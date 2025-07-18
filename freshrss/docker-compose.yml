@@ -16,16 +16,16 @@ services:
       - 8040:80
     restart: unless-stopped
 
-  full-text-rss:
-    image: heussd/fivefilters-full-text-rss:latest
-    container_name: full-text-rss
-    restart: unless-stopped
-    volumes:
-      - ./rss-cache:/var/www/html/cache/rss
-    networks:
-      - homelab-network
-    ports:
-      - 8041:80
+  # full-text-rss:
+  #   image: heussd/fivefilters-full-text-rss:latest
+  #   container_name: full-text-rss
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./rss-cache:/var/www/html/cache/rss
+  #   networks:
+  #     - homelab-network
+  #   ports:
+  #     - 8041:80
 
 volumes:
   rss-cache:
