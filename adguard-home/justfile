@@ -1,0 +1,19 @@
+# Start all Adguard-Home service containers
+start:
+	docker-compose up -d
+
+# Stop all Adguard-Home service containers
+stop:
+	docker-compose stop
+
+# Update Adguard-Home
+update:
+	docker-compose pull
+
+# Restart Adguard-Home
+restart:
+	docker-compose restart
+
+# Recreate Adguard-Home
+recreate:
+	docker-compose up -d --force-recreate
