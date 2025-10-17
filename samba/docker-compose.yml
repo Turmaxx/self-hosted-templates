@@ -11,3 +11,9 @@ services:
       - ./smb.conf:/etc/samba/smb.conf
       - ./users.conf:/etc/samba/users.conf
     restart: unless-stopped
+    networks:
+      - homelab-network
+
+networks:
+  homelab-network:
+    external: true
