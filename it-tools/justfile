@@ -1,0 +1,19 @@
+# Start it-tools
+start:
+	docker-compose up -d
+
+# Stop it-tools
+stop:
+	docker-compose stop
+
+# Update it-tools
+update:
+	docker-compose pull
+
+# Restart it-tools
+restart:
+	docker-compose restart
+
+# Recreate it-tools
+recreate:
+	docker-compose up -d --force-recreate
