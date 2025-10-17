@@ -80,3 +80,6 @@ glance/*
 
 trillium/*
 !trillium/docker-compose.yml
+
+nginx/*
+!nginx/docker-compose.yml
