@@ -1,0 +1,92 @@
+- name: Services
+  # width: slim
+  # hide-desktop-navigation: false
+  # center-vertically: true
+  columns:
+    - size: full
+      widgets:
+        - type: search
+          autofocus: true
+
+        - type: monitor
+          cache: 1m
+          title: Services
+          sites:
+            - title: Jellyfin
+              url: https://yourdomain.com/
+              icon: di:jellyfin
+            - title: Gitea
+              url: https://yourdomain.com/
+              icon: di:gitea
+            - title: qBittorrent # only for Linux ISOs, of course
+              url: https://yourdomain.com/
+              icon: di:qbittorrent
+            - title: Immich
+              url: http://localhost:2283
+              allow-insecure: true
+              icon: di:immich
+            - title: AdGuard Home
+              url: https://yourdomain.com/
+              icon: di:adguard-home
+            - title: Vaultwarden
+              url: https://yourdomain.com/
+              icon: di:vaultwarden
+
+        - type: bookmarks
+          groups:
+            - title: General
+              links:
+                - title: Gmail
+                  url: https://mail.google.com/mail/u/0/
+                - title: Amazon
+                  url: https://www.amazon.com/
+                - title: Github
+                  url: https://github.com/
+            - title: Entertainment
+              links:
+                - title: YouTube
+                  url: https://www.youtube.com/
+                - title: Prime Video
+                  url: https://www.primevideo.com/
+                - title: Disney+
+                  url: https://www.disneyplus.com/
+            - title: Social
+              links:
+                - title: Reddit
+                  url: https://www.reddit.com/
+                - title: Twitter
+                  url: https://twitter.com/
+                - title: Instagram
+                  url: https://www.instagram.com/
+
+    - size: small
+      widgets:
+        - type: server-stats
+          servers:
+          - type: local
+            name: main-laptop
+
+        - type: custom-api
+          title: Random Fact
+          cache: 6h
+          url: https://uselessfacts.jsph.pl/api/v2/facts/random
+          template: |
+            <p class="size-h4 color-paragraph">{{ .JSON.String "text" }}</p>
+
+        - type: custom-api
+          title: Steam Specials
+          cache: 12h
+          url: https://store.steampowered.com/api/featuredcategories?cc=us
+          template: |
+            <ul class="list list-gap-10 collapsible-container" data-collapse-after="5">
+            {{ range .JSON.Array "specials.items" }}
+              <li>
+                <a class="size-h4 color-highlight block text-truncate" href="https://store.steampowered.com/app/{{ .Int "id" }}/">{{ .String "name" }}</a>
+                <ul class="list-horizontal-text">
+                  <li>{{ div (.Int "final_price" | toFloat) 100 | printf "$%.2f" }}</li>
+                  {{ $discount := .Int "discount_percent" }}
+                  <li{{ if ge $discount 40 }} class="color-positive"{{ end }}>{{ $discount }}% off</li>
+                </ul>
+              </li>
+            {{ end }}
+            </ul>

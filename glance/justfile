@@ -1,0 +1,19 @@
+# Start Glance Dashboard
+start:
+	docker-compose up -d
+
+# Stop Glance Dashboard
+stop:
+	docker-compose stop
+
+# Update Glance Dashboard
+update:
+	docker-compose pull
+
+# Restart Glance Dashboard
+restart:
+	docker-compose restart
+
+# Recreate Glance Dashboard
+recreate:
+	docker-compose up -d --force-recreate
