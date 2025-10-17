@@ -66,3 +66,17 @@ syncthing/*
 traefik/*
 !traefik/docker-compose.yml
 
+adguard-home/*
+!adguard-home/docker-compose.yml
+
+authentik/*
+!authentik/docker-compose.yml
+
+convertX/*
+!convertX/docker-compose.yml
+
+glance/*
+!glance/docker-compose.yml
+
+trillium/*
+!trillium/docker-compose.yml
