@@ -8,7 +8,5 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     privileged: true
-    ports:
-      - 8123:8123
     network_mode: host
     restart: unless-stopped
