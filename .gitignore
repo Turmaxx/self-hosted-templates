@@ -83,3 +83,6 @@ trillium/*
 
 nginx/*
 !nginx/docker-compose.yml
+
+nextcloud/*
+!nextcloud/docker-compose.yml
