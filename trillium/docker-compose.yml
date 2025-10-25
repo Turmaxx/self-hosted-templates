@@ -1,0 +1,16 @@
+---
+services:
+  trillium:
+    image: triliumnext/notes:latest
+    container_name: trilium
+    ports:
+      - 9038:8080
+    volumes:
+      - ./trilium-data:/home/node/trilium-data
+    networks:
+      - homelab-network
+    restart: unless-stopped
+
+networks:
+  homelab-network:
+    external: true
