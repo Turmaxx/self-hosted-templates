@@ -1,21 +1,33 @@
 ---
 services:
   traefik:
-    image: docker.io/library/traefik:v3.3.4
-    container_name: traefik-proxy
+    image: traefik:v3.4
+    container_name: traffic
+    command:
+      # - "--api.insecure=false"
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
     ports:
-      - 80:80
-      - 443:443
-      - 8030:8080
+      - "80:80"
+      - "443:443"
+      # - "8030:8080"
+    env_file:
+      - .env
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.rule=Host(`dashboard.docker.localhost`)"
+      - "traefik.http.routers.dashboard.entrypoints=web,websecure"
+      - "traefik.http.routers.dashboard.service=api@internal"
+      # - "traefik.http.routers.dashboard.middlewares=dashboard-auth@docker"
+      # - "traefik.http.middlewares.dashboard-auth.basicauth.users=${DASHBOARD_AUTH}"
     volumes:
-      - /run/docker.sock:/run/docker.sock:ro
-      - ./config:/etc/traefik:ro
-      # - ./certs/:/var/traefik/certs/:rw
-    # environment:
-    #   - CLOUDFLARE_DNS_API_TOKEN=my-cloudflare-api-token
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # - ./certs:/certs:ro
+      # - ./dynamic:/dynamic:ro
     networks:
       - homelab-network
-    restart: unless-stopped
 
 networks:
   homelab-network:
