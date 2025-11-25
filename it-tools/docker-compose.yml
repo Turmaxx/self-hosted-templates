@@ -9,10 +9,9 @@ services:
       - 8085:80
     labels:
       - traefik.enable=true
-      - traefik.http.routers.it-tools.rule=Host(`it-tools.brook.laptop`)
+      - traefik.http.routers.it-tools.rule=Host(`it-tools.localhost`)
       - traefik.http.routers.it-tools.entrypoints=web
-      # - traefik.http.routers.it-tools.service=it-tools@docker
-      # - traefik.http.routers.it-tools.loadbalancer.server.port=8085
+      - traefik.http.services.it-tools.loadbalancer.server.port=80
     restart: unless-stopped
 
 networks:
