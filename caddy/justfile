@@ -1,0 +1,19 @@
+# Start Caddy Container
+start:
+	docker-compose up -d
+
+# Stop Caddy Container
+stop:
+	docker-compose stop
+
+# Update Caddy Container
+update:
+	docker-compose pull
+
+# Restart Caddy Container
+restart:
+	docker-compose restart
+
+# Recreate Caddy Container
+recreate:
+	docker-compose up -d --force-recreate
