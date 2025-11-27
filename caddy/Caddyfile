@@ -1,0 +1,23 @@
+it-tools.localhost {
+    reverse_proxy it-tools:80
+}
+
+portainer.localhost {
+    reverse_proxy https://portainer:9443 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+}
+
+immich.localhost {
+    reverse_proxy immich-server:2283
+}
+
+http://adguard.localhost {
+    reverse_proxy adguard-home:80
+}
+
+qbittorrent.localhost {
+    reverse_proxy http://qbittorrent:8080
+}
