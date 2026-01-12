@@ -1,0 +1,17 @@
+---
+services:
+  zerobyte:
+    image: ghcr.io/nicotsx/zerobyte:v0.22
+    container_name: zerobyte
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 4096:4096
+    devices:
+      - /dev/fuse:/dev/fuse
+    environment:
+      - TZ=Africa/Addis_Ababa
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/lib/zerobyte:/var/lib/zerobyte
