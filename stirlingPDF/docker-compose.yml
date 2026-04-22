@@ -1,16 +1,16 @@
 ---
 services:
   stirling-pdf:
-    image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
+    image: stirlingtools/stirling-pdf:latest
     container_name: stirlingpdf
     ports:
       - 8070:8080
     volumes:
-      - ./trainingData:/usr/share/tessdata # Required for extra OCR languages
-      - ./extraConfigs:/configs
-      - ./customFiles:/customFiles/
-      - ./logs:/logs/
-      - ./pipeline:/pipeline/
+      - ./stirling-data/trainingData:/usr/share/tessdata
+      - ./stirling-data/extraConfigs:/configs
+      - ./stirling-data/customFiles:/customFiles/
+      - ./stirling-data/logs:/logs/
+      - ./stirling-data/pipeline:/pipeline/
     networks:
       - homelab-network
     environment:
