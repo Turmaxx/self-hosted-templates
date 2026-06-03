@@ -1,0 +1,19 @@
+# Start Navidrome Container
+start:
+    docker-compose up -d
+
+# Stop Navidrome Container
+stop:
+    docker-compose stop
+
+# Update Navidrome Container
+update:
+    docker-compose pull
+
+# Restart Navidrome Container
+restart:
+    docker-compose restart
+
+# Recreate Navidrome Container
+recreate:
+    docker-compose up -d --force-recreate
