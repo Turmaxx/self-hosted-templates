@@ -86,3 +86,6 @@ nginx/*
 
 nextcloud/*
 !nextcloud/docker-compose.yml
+
+monitoring/*
+!monitoring/docker-compose.yml
