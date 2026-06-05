@@ -89,3 +89,6 @@ nextcloud/*
 
 monitoring/*
 !monitoring/docker-compose.yml
+
+papra/*
+!papra/docker-compose.yml
