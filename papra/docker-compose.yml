@@ -1,0 +1,19 @@
+---
+services:
+  papra:
+    container_name: papra
+    image: ghcr.io/papra-hq/papra:latest
+    restart: unless-stopped
+    user: "${UID}:${GID}"
+    ports:
+      - "1221:1221"
+    environment:
+      AUTH_SECRET: "${SOCKET}"
+    volumes:
+      - ./data:/app/app-data
+    networks:
+      - homelab-network
+
+networks:
+  homelab-network:
+    external: true
