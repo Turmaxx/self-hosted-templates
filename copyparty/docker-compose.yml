@@ -1,0 +1,11 @@
+---
+services:
+  copyparty:
+    image: copyparty/ac:latest
+    container_name: copyparty
+    ports:
+      - 3923:3923
+    volumes:
+      - ./data/config.conf:/cfg/config.conf:ro
+      - ./data/:/cfg/hists #database files
+      # - /mnt/media:/media #files being exposed to Copyparty
