@@ -4,6 +4,7 @@ in
 pkgs.mkShell {
   name = "Homelab Environement Setup";
   buildInputs = with pkgs; [
+    just
     gnumake
     docker-compose
   ];
