@@ -92,3 +92,6 @@ monitoring/*
 
 papra/*
 !papra/docker-compose.yml
+
+beszel/*
+!beszel/docker-compose.yml
