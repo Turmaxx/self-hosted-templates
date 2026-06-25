@@ -10,8 +10,7 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./config:/config
-      # - /path/to/data1:/data1
-      # - /path/to/data2:/data2
+      - /home/brook/Music:/music
     ports:
       - 8384:8384
       - 22000:22000/tcp
